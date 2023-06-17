@@ -108,7 +108,7 @@ impl NodeTypesConfig {
             node_type = node_type.extend(conf);
         }
 
-        if let Some(conf) = self.special.get(&node.relative_path) {
+        if let Some(conf) = self.special.get(&node.relative_path.to_ascii_lowercase()) {
             node_type = node_type.extend(conf);
         }
 
